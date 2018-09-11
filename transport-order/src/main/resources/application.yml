@@ -1,0 +1,11 @@
+server:
+  port: 2100
+
+spring:
+  application:
+    name: CalculatorServer                     # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:1100/eureka/  # 指定服务注册中心的地址

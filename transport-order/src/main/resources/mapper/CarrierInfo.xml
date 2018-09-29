@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yoo.order.mapper.CarrierInfoMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.yoo.order.entity.CarrierInfo">
+		<id column="carrier_id" property="carrierId" />
+		<result column="user_id" property="userId" />
+		<result column="carrier_name" property="carrierName" />
+		<result column="carrier_type" property="carrierType" />
+		<result column="parent_id" property="parentId" />
+	</resultMap>
+
+
+</mapper>

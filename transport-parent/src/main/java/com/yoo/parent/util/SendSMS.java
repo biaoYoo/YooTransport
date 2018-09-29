@@ -1,4 +1,5 @@
-package com.yoo.capacity.service;
+/*
+package com.yoo.parent.util;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -11,33 +12,43 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 
 
+*/
 /**
   * Http Demo for Java（孕妇2.0）
   * 采用httpclient调用SendMsg接口
   * 参考文档《短信http接口文档.doc》
-  */
+  *//*
+
 public class SendSMS {
-	/**
+	*/
+/**
 	 * 短信提供商开设账号时提供一下参数:
 	 * 账号、密码、通信key、ip、端口
-	 */
+	 *//*
+
 	static String account ;//账号
 	static String password ;//密码
 	static String veryCode ;//通信key
 	static String http_url ;//ip+端口
-	/**
+	*/
+/**
 	 * 默认字符编码集
-	 */
+	 *//*
+
 	public static final String CHARSET_UTF8 = "UTF-8";
 	static {
-		/*Properties p = new Properties();*/
+		*/
+/*Properties p = new Properties();*//*
+
 		try {
 			//1.读取参数
-			/*p.load(SendSMS.class.getClassLoader().getResourceAsStream("sendMessage.properties"));
+			*/
+/*p.load(SendSMS.class.getClassLoader().getResourceAsStream("sendMessage.properties"));
 			account = p.getProperty("account");
 			password = p.getProperty("password");
 			veryCode = p.getProperty("veryCode");
-			http_url= p.getProperty("http_url");*/
+			http_url= p.getProperty("http_url");*//*
+
 			account="JSM41792";
 			password="uatvuzdh";
 			veryCode="s491rwy7k7gk";
@@ -46,13 +57,15 @@ public class SendSMS {
 			e.printStackTrace();
 	  }
 	}
-	/**
+	*/
+/**
 	 * 发送普通短信  普通短信发送需要人工审核
 	 * @param mobile 手机号码, 多个号码以英文逗号隔开,最多支持100个号码
 	 * @param content 短信内容 
 	 * @return  
 	 * String xml字符串，格式请参考文档说明
-	 */
+	 *//*
+
 	public static String sendSms(String mobile,String content){
 		String sendSmsUrl = http_url + "/service/httpService/httpInterface.do?method=sendMsg";
 		StringBuilder param = new StringBuilder();
@@ -71,7 +84,8 @@ public class SendSMS {
 		return result;
 	}
 	
-	/**
+	*/
+/**
 	 * 模版短信,无需人工审核，直接发送
 	 *   (短信模版的创建参考客户端操作手册)
 	 *   模版：@1@会员，动态验证码@2@(五分钟内有效)。请注意保密，勿将验证码告知他人。
@@ -89,7 +103,8 @@ public class SendSMS {
 	 * @param tplId 模板编号，对应客户端模版编号
 	 * @param content 模板参数值，以英文逗号隔开，如：@1@=某某,@2@=4293
 	 * @return xml字符串，格式请参考文档说明
-	 */
+	 *//*
+
 	public static String sendTplSms(String mobile,String tplId,String content){
 		String sendTplSmsUrl = http_url + "/service/httpService/httpInterface.do?method=sendMsg";
 		StringBuilder param = new StringBuilder();
@@ -108,13 +123,15 @@ public class SendSMS {
 		String result = sendPostHttp(sendTplSmsUrl, entity);
 		return result;
 	}
-	/**
+	*/
+/**
      * 消息提醒模板： 发送消息提醒短信 
      * @param mobile 手机号码, 多个号码以英文逗号隔开,最多支持100个号码
      * @param title 提醒标题，如医嘱通知，自测通知
      * @param content 消息内容
      * @return
-     */
+     *//*
+
     public static String sendNoticeSms(String mobile,String title,String content){
         String sendTplSmsUrl = http_url + "/service/httpService/httpInterface.do?method=sendMsg";
         String sendMsg="@1@="+title+",@2@="+content;
@@ -135,12 +152,14 @@ public class SendSMS {
         return result;
     }
 	
-	/**
+	*/
+/**
 	 * 发送HttpPOST请求
 	 * @param postUrl 请求地址
 	 * @param entity 请求参数实体
 	 * @return String
-	 */
+	 *//*
+
 	public static String sendPostHttp(String postUrl,StringEntity entity){
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		String str = "";
@@ -159,13 +178,15 @@ public class SendSMS {
 		return str;
 	}
 	
-    /**
+    */
+/**
      * @methodName getStatusVal
      * @description:获取状态码
      * @param str
      * @return String
      * @throws
-     */
+     *//*
+
     public static String getStatusVal(String str){
 		return str.substring(str.indexOf("<status>")+8,str.indexOf("</status>")).trim();
     }
@@ -185,3 +206,4 @@ public static void main(String[] args) {
 	}
 }
 
+*/

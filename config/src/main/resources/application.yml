@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          password: your password
+          searchPaths: respo
+          uri: https://github.com/forezp/SpringcloudConfig/
+          username: your username
+      label: master
+
+  application:
+    name: config-server
+server:
+  port: 8888

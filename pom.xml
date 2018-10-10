@@ -33,7 +33,8 @@
         <module>transport-order</module>
         <module>transport-capacity</module>
         <module>transport-user</module>
-        <module>transport-parent</module>
+        <module>gateway</module>
+        <module>registry</module>
     </modules>
 
     <dependencyManagement>
@@ -73,6 +74,29 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- 热部署 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <version>${devtools.version}</version>
+        </dependency>
+
+        <!-- config client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
 
 
     </dependencies>

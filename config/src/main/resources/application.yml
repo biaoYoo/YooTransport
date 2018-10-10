@@ -2,14 +2,31 @@ spring:
   cloud:
     config:
       server:
-        git:
-          password: your password
-          searchPaths: respo
-          uri: https://github.com/forezp/SpringcloudConfig/
-          username: your username
-      label: master
-
+        native:
+            search-locations: classpath:/shared
+#        git:
+#          searchPaths: config/src/main/resources
+#          uri: https://github.com/biaoyoo/YooTransport/
+#          username: biaoyoo
+#          password: xiaoyu332404
+#      label: master
+  profiles:
+    active: native
   application:
     name: config-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:1100/eureka/  # 指定服务注册中心的地址
+
+
+security:
+  user:
+   name: yoo
+   password: yu123
+
 server:
   port: 8888
+
+

@@ -1,5 +1,6 @@
-package com.yoo.capacity;
+package com.yoo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -9,16 +10,15 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableScheduling
-public class TransportCapacityApplication extends SpringBootServletInitializer {
+@MapperScan("com.yoo.user.mapper")
+public class TransportUserApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TransportCapacityApplication.class, args);
+		SpringApplication.run(TransportUserApplication.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(TransportCapacityApplication.class);
+		return builder.sources(TransportUserApplication.class);
 	}
 }
-

@@ -6,3 +6,8 @@ eureka:
     register-with-eureka: false
   serviceUrl:
     defaultZone: http://127.0.0.1:${server.port}/eureka/
+
+security:
+  user:
+   name: yoo
+   password: yu123

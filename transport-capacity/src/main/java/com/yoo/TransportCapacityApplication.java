@@ -1,23 +1,26 @@
-package com.yoo.user;
+package com.yoo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-
+@EnableEurekaClient
 @EnableScheduling
-public class TransportUserApplication extends SpringBootServletInitializer {
+@MapperScan("com.yoo.capacity.mapper")
+public class TransportCapacityApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TransportUserApplication.class, args);
+		SpringApplication.run(TransportCapacityApplication.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(TransportUserApplication.class);
+		return builder.sources(TransportCapacityApplication.class);
 	}
 }
+

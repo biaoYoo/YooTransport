@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: geteway
+  cloud:
+    config:
+       uri: http://localhost:8888
+       label: master
+       password: yu123
+       username: yoo

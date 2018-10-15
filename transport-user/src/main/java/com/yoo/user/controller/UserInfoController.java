@@ -2,6 +2,7 @@ package com.yoo.user.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -11,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Yoo.biao
  * @since 2018-09-27
  */
-@Controller
-@RequestMapping("/order/userInfo")
+@RestController
 public class UserInfoController {
-	
+
+
+
+
 }

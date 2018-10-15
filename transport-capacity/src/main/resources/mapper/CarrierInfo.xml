@@ -3,7 +3,7 @@
 <mapper namespace="com.yoo.order.mapper.CarrierInfoMapper">
 
 	<!-- 通用查询映射结果 -->
-	<resultMap id="BaseResultMap" type="com.yoo.order.entity.CarrierInfo">
+	<resultMap id="BaseResultMap" type="com.yoo.capacity.entity.CarrierInfo">
 		<id column="carrier_id" property="carrierId" />
 		<result column="user_id" property="userId" />
 		<result column="carrier_name" property="carrierName" />

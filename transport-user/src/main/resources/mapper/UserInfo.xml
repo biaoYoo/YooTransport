@@ -3,7 +3,7 @@
 <mapper namespace="com.yoo.order.mapper.UserInfoMapper">
 
 	<!-- 通用查询映射结果 -->
-	<resultMap id="BaseResultMap" type="com.yoo.order.entity.UserInfo">
+	<resultMap id="BaseResultMap" type="com.yoo.user.entity.UserInfo">
 		<id column="user_id" property="userId" />
 		<result column="user_name" property="userName" />
 		<result column="account" property="account" />

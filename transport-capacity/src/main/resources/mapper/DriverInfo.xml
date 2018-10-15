@@ -3,7 +3,7 @@
 <mapper namespace="com.yoo.order.mapper.DriverInfoMapper">
 
 	<!-- 通用查询映射结果 -->
-	<resultMap id="BaseResultMap" type="com.yoo.order.entity.DriverInfo">
+	<resultMap id="BaseResultMap" type="com.yoo.capacity.entity.DriverInfo">
 		<id column="driver_id" property="driverId" />
 		<result column="carrier_id" property="carrierId" />
 		<result column="user_id" property="userId" />

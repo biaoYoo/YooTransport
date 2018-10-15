@@ -1,7 +1,11 @@
 package com.yoo.order.controller;
 
+import com.yoo.order.service.IOrderInfoService;
+import com.yoo.order.service.OrderInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -11,8 +15,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Yoo.biao
  * @since 2018-09-27
  */
-@Controller
-@RequestMapping("/order/orderInfo")
+@RestController
 public class OrderInfoController {
-	
+
+	@Autowired
+	private OrderInfoService orderInfoService;
+
+	@RequestMapping("/hi")
+	public Object sayHi(String name) {
+		return orderInfoService.sayHello(name);
+	}
+
 }

@@ -1,13 +1,24 @@
 server:
-  port: 1100
+  port: 80
+
 eureka:
   client:
-    fetch-registry: false
-    register-with-eureka: false
-  serviceUrl:
-    defaultZone: http://127.0.0.1:${server.port}/eureka/
+    serviceUrl:
+      defaultZone: http://yoo:yu123@127.0.0.1:1100/eureka/  # 指定服务注册中心的地址
 
-security:
-  user:
-   name: yoo
-   password: yu123
+zuul:
+  routes:
+    provider-capacity:
+      path: /provider-capacity/**
+      serviceId: provider-capacity
+    provider-order:
+      path: /provider-order/**
+      serviceId: provider-order
+    provider-user:
+      path: /provider-user/**
+      serviceId: provider-user
+
+
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000

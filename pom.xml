@@ -5,7 +5,7 @@
 
     <groupId>com.yoo</groupId>
     <artifactId>transport</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
 
     <name>transport</name>
@@ -27,6 +27,7 @@
         <velocity.version>2.0</velocity.version>
         <freemarker.version>2.3.23</freemarker.version>
         <devtools.version>1.4.2.RELEASE</devtools.version>
+        <springcloud.version>1.4.3.RELEASE</springcloud.version>
     </properties>
 
     <modules>
@@ -74,10 +75,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
 
         <!-- 热部署 -->
         <dependency>

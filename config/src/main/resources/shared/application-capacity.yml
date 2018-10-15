@@ -10,15 +10,11 @@ spring:
       password: yu123
       driver-class-name: com.mysql.jdbc.Driver
 
-security:
-  user:
-   name: yoo
-   password: yu123
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${security.user.name}:${security.user.password}@127.0.0.1:1100/eureka/  # 指定服务注册中心的地址
+      defaultZone: http://yoo:yu123@127.0.0.1:1100/eureka/  # 指定服务注册中心的地址
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml

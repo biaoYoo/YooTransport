@@ -6,6 +6,7 @@ import com.yoo.capacity.service.ICarrierInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,14 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018-09-27
  */
 @RestController
-@RequestMapping("/order/carrierInfo")
 public class CarrierInfoController {
 
 	@Autowired
 	private ICarrierInfoService carrierInfoService;
 
 	@GetMapping("/hello")
-	public Object getUserInfo(String userId) {
+	public Object getUserInfo(@RequestParam String userId) {
 		return carrierInfoService.selectById(userId);
 	}
 

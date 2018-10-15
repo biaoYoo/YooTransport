@@ -5,6 +5,8 @@ import com.yoo.order.mapper.OrderInfoMapper;
 import com.yoo.order.service.IOrderInfoService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * <p>
@@ -16,5 +18,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo> implements IOrderInfoService {
-	
+
 }

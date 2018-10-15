@@ -5,7 +5,7 @@
 
     <groupId>com.yoo</groupId>
     <artifactId>registry</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>registry</name>
@@ -14,7 +14,7 @@
     <parent>
         <groupId>com.yoo</groupId>
         <artifactId>transport</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 

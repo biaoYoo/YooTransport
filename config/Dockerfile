@@ -1,9 +1,15 @@
 FROM frolvlad/alpine-oraclejdk8:slim
+MAINTAINER Yoob <yoothinkcan@gmail.com>
 
-RUN mvn clean package
+COPY *.xml /app/
+WORKDIR /app
+RUN mvn -s maven-settings.xml  verify clean -Dmaven.repo.local=/tmp/cache --fail-never
 
-ADD ./target/config-1.0.jar config.jar
+# package
+COPY . /app
+RUN mvn -s maven-settings.xml -B -DskipTests=true -Dmaven.repo.local=/tmp/cache clean install
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/config-1.0.jar"]
+ENV PORT=4000
+CMD ["java", "-Xmx200m","-Dserver.port=${PORT}","-jar", "/app/target/gateway.jar"]
 
-EXPOSE 8761
+EXPOSE 4000

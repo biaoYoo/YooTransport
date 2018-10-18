@@ -2,16 +2,16 @@ spring:
   cloud:
     config:
       server:
-        native:
-            search-locations: classpath:/shared
-#        git:
-#          searchPaths: config/src/main/resources
-#          uri: https://github.com/biaoyoo/YooTransport/
-#          username: biaoyoo
-#          password: xiaoyu332404
-#      label: master
-  profiles:
-    active: native
+#        native:
+#            search-locations: classpath:/shared
+        git:
+          searchPaths: config/src/main/resources/shared
+          uri: https://github.com/biaoYoo/YooTransport/
+          username: biaoYoo
+          password: Yu332404
+      label: master
+#  profiles:
+#    active: native
   application:
     name: config-server
 

@@ -1,0 +1,32 @@
+version: '2.1'
+services:
+  transport-capacity:
+    build: transport-capacity
+#    depends_on:
+#      config:
+#        condition: service_healthy
+    ports:
+      - 2200:2200
+    logging:
+       options:
+          max-size: "10m"
+          max-file: "10"
+
+  transport-order:
+    build: transport-order
+    ports:
+      - 2100:2100
+    logging:
+       options:
+          max-size: "10m"
+          max-file: "10"
+
+  transport-user:
+    build: transport-user
+    ports:
+      - 2300:2300
+    logging:
+       options:
+          max-size: "10m"
+          max-file: "10"
+

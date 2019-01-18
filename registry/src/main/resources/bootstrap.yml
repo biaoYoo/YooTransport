@@ -3,7 +3,7 @@ spring:
     name: registry
   cloud:
     config:
-       uri: http://localhost:8888
+       uri: http://config:8888
        label: master
        password: yu123
        username: yoo

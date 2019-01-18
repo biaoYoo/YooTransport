@@ -1,0 +1,30 @@
+version: '2.1'
+services:
+  config:
+    build: config
+    ports:
+      - 8888:8888
+    logging:
+       options:
+          max-size: "10m"
+          max-file: "10"
+    environment:
+      - RABBIT_IP=120.76.62.168
+
+  registry:
+    build: registry
+    ports:
+      - 1100:1100
+    logging:
+       options:
+          max-size: "10m"
+          max-file: "10"
+
+  geteway:
+    build: gateway
+    ports:
+      - 80:80
+    logging:
+       options:
+         max-size: "10m"
+         max-file: "10"

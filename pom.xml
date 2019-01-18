@@ -17,84 +17,33 @@
         <version>1.4.3.RELEASE</version>
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <mybatis-plus.version>2.2.0</mybatis-plus.version>
-        <druid.version>1.1.10</druid.version>
-        <mysql.version>5.1.6</mysql.version>
-        <velocity.version>2.0</velocity.version>
-        <freemarker.version>2.3.23</freemarker.version>
-        <devtools.version>1.4.2.RELEASE</devtools.version>
-        <springcloud.version>1.4.3.RELEASE</springcloud.version>
-    </properties>
-
     <modules>
         <module>transport-order</module>
         <module>transport-capacity</module>
         <module>transport-user</module>
         <module>gateway</module>
         <module>registry</module>
+        <module>config</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Camden.SR4</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <properties>
+        <jarPath>D:\myProject\jar</jarPath>
+    </properties>
+
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
+        <!--<dependency>
             <groupId>com.yoo</groupId>
             <artifactId>transport-parent</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-
-
-        <!-- 热部署 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <version>${devtools.version}</version>
-        </dependency>
-
-        <!-- config client -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-
 
     </dependencies>
 
@@ -103,19 +52,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <outputDirectory>
+                        D:\myProject\jar
+                    </outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 </project>

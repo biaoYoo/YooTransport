@@ -14,7 +14,11 @@ spring:
 #    active: native
   application:
     name: config-server
-
+  rabbitmq:
+    host: 120.76.62.168
+    port: 5672
+    username: guest
+    password: guest
 
 #eureka:
 #  client:

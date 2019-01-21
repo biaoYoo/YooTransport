@@ -1,3 +1,10 @@
+spring:
+  rabbitmq:
+     host: 120.76.62.168
+     port: 5672
+     username: guest
+     password: guest
+
 server:
   port: 1100
 
@@ -6,4 +13,4 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
   serviceUrl:
-    defaultZone: http://127.0.0.1:${server.port}/eureka/
+    defaultZone: http://120.76.62.168:${server.port}/eureka/

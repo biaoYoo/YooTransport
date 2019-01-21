@@ -5,16 +5,20 @@ spring:
   application:
     name: provider-user                        # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
   datasource:
-      url: jdbc:mysql://localhost:3306/transport?characterEncoding=UTF-8&useUnicode=true&useSSL=false
+      url: jdbc:mysql://120.76.62.168:3306/transport?characterEncoding=UTF-8&useUnicode=true&useSSL=false
       username: root
       password: yu123
       driver-class-name: com.mysql.jdbc.Driver
-
+  rabbitmq:
+     host: 120.76.62.168
+     port: 5672
+     username: guest
+     password: guest
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://yoo:yu123@127.0.0.1:1100/eureka/  # 指定服务注册中心的地址
+      defaultZone: http://yoo:yu123@120.76.62.168:1100/eureka/  # 指定服务注册中心的地址
 
 
 mybatis-plus:

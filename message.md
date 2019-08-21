@@ -22,12 +22,12 @@
   |icon|  是|string|头像地址|基本信息|
   |containerId|  |string| 容器主键| 1toN-是多人的用户主键 |
  |targetId|  |string| 目标业务主键|1toN-当群组号不是业务主键时，多人方需要传 |
- |clientType|  |string| 请求的客户端类型（yidao-医道项目）|账号密码验证所在的项目|
+ |clientType|  |string| 请求的客户端类|账号密码验证所在的项目|
   |account|  |string| 账号|-|
    |password|  |string| 密码（MD5密文）|-|
 
  **使用操作**
-	根据所使用的规则，选择连接时所需参数。1个医生对多用户的情况连接后，由用户发送createContainer，医生接受到createContainer后到发送addContainer，即可完成连接与容器创建，医生发信息时需要带指定容器的主键。多人群聊的情况下则可以修改所在房间updateRoomName，并修改用户信息updateUserInfo
+	根据所使用的规则，选择连接时所需参数。1个客服对多用户的情况连接后，由用户发送createContainer，客服接受到createContainer后到发送addContainer，即可完成连接与容器创建，客服发信息时需要带指定容器的主键。多人群聊的情况下则可以修改所在房间updateRoomName，并修改用户信息updateUserInfo
 
  **消息类型说明与使用**
 

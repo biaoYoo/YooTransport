@@ -55,7 +55,8 @@
 //发送信息，对应类型加上对应信息
  {
 	"messageContent":"xxx", --消息内容
-	"messageType":"xxx", --信息类型 文字（text）,图片（picture）,视频（video）,语音（voice）,自定义事件（event）,修改房间-房间号码在消息内容中（updateRoomName）,修改用户信息-messageContent.名字userIconUpdate.头像（updateUserInfo）,添加至容器-写在内容器主键（addContainer）,创建容器-单聊接受是指定创建的人（createContainer）,删除容器-提醒容器内所有人（removeContainer），自动回复信息-消息内容放指定回复信息代号容器主键需要填（autoReturn）
+	"messageType":"xxx", --信息类型 文字（text）,图片（picture）,视频（video）,语音（voice）,自定义事件（event）
+	"eventType":"xxx",--消息事件  普通消息（ordinary）,添加至容器-写在内容器主键（addContainer）,创建容器-单聊接受是指定创建的人（createContainer）,删除容器-提醒容器内所有人（removeContainer），自动回复信息-消息内容放指定回复信息代号容器主键需要填（autoReturn）
 	"acceptId":"xxx", --单聊接收人的用户主键
 	"userIcon":"xxx",  --发送人头像
 	"containerId":"xxx", --容器主键（多人聊天使用）

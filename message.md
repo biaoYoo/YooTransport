@@ -29,17 +29,17 @@
  **使用操作**
 	根据所使用的规则，选择连接时所需参数。1个客服对多用户的情况连接后，由用户发送createContainer，客服接受到createContainer后到发送addContainer，即可完成连接与容器创建，客服发信息时需要带指定容器的主键。多人群聊的情况下则可以修改所在房间updateRoomName，并修改用户信息updateUserInfo
 
- **消息类型说明与使用**
+ **消息类型和消息事件说明与使用**
 
 |类型|说明|必带参数|非必带参数|
 |:----    |:---|:----- |-----   |
-|所有规则通用 |
+|所有规则通用-消息类型 |
 |text| 文字 | messageContent-内容| -|
 |picture| 图片 | accessoryContent-附带信息 | -|
 |video| 视频 | accessoryContent-附带信息 | -|
 |voice| 语音 | accessoryContent-附带信息 | -|
 |event| 自定义事件 | accessoryContent-自定义内容 | messageContent|
-|多人群聊规则（不带容器）| 
+|多人群聊规则（不带容器）-消息事件| 
 |updateRoomName| 修改房间 | messageContent-房间号码 | -|
 |updateUserInfo| 修改用户信息 | - | userIconUpdate-头像，messageContent-名字|
 |单人与多人群聊规则（带容器）| 

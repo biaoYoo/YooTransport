@@ -24,7 +24,7 @@
         <mybatis-plus.version>2.2.0</mybatis-plus.version>
         <druid.version>1.1.10</druid.version>
         <mysql.version>5.1.6</mysql.version>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.5.0</shiro.version>
         <kaptcha.version>2.3.2</kaptcha.version>
         <ehcache.version>3.5.2</ehcache.version>
         <velocity.version>2.0</velocity.version>
